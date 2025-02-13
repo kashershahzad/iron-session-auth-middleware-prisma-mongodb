@@ -77,8 +77,7 @@ const SignInForm = () => {
               {loading ? 'Signing In...' : 'Sign In'}
             </button>
           </div>
-        </form>
-        
+        </form> 
         <div className="mt-4 text-center">
           <p className="text-gray-600">Don't have an account? <a href="/signup" className="text-blue-600 hover:underline">Register yourself</a></p>
         </div>
