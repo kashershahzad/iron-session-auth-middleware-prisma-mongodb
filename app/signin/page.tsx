@@ -2,13 +2,14 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'; 
+
 const SignInForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-   const router = useRouter();
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -77,6 +78,10 @@ const SignInForm = () => {
             </button>
           </div>
         </form>
+
+        <div className="mt-4 text-center">
+          <p className="text-gray-600">Don't have an account? <a href="/signup" className="text-blue-600 hover:underline">Register yourself</a></p>
+        </div>
       </div>
     </div>
   );
