@@ -1,4 +1,4 @@
-import { IronSessionOptions } from "iron-session";
+import { SessionOptions } from "iron-session";
 
 declare module "iron-session" {
   interface IronSessionData {
@@ -10,7 +10,7 @@ declare module "iron-session" {
   }
 }
 
-export const sessionOptions: IronSessionOptions = {
+export const sessionOptions: SessionOptions = {
   password: process.env.SESSION_SECRET ?? "",
   cookieName: "User_data",
   cookieOptions: {
